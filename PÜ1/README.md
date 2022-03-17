@@ -1,5 +1,4 @@
 # Leistungsdiagnostik
-
 Tool zur automatisierten Auswertung der Daten eines Fahrradergometer-Leistungstests, welches als Ergebnis sowohl die Herzrate, als auch die erbrachte Leistung in Form eines Plots und deren zugrundeliegenden Daten, gespeichert in einer Datei, liefert.
 
 ## Installation
