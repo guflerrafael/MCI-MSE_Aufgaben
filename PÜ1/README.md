@@ -1,19 +1,16 @@
 # Leistungsdiagnostik
-**(kurze Beschreibung des Ziels)**
 
-Tool zur automatisierten Auswertung der Daten eines Fahrradergometer-Leistungstest, welches als Ergebnis sowohl die Herzrate, als auch die erbrachte Leistung in Form eines Plots und deren zugrundeliegenden Daten, gespeichert in einer Datei, liefert.
+Tool zur automatisierten Auswertung der Daten eines Fahrradergometer-Leistungstests, welches als Ergebnis sowohl die Herzrate, als auch die erbrachte Leistung in Form eines Plots und deren zugrundeliegenden Daten, gespeichert in einer Datei, liefert.
 
 ## Installation
 
-(Was muss man tun, bevor man das Werkzeug nutzen kann?)
-
-t.b.d.
+Für die Proof-Of-Concept-Version des Tools wird nur die Kommandozeile gebraucht, weshalb keine zusätzliche Installation nötig ist.
 
 ## Usage
 
 (Wie benutzt man das Werkzeug. Wo müssen Daten in welcher Form liegen?)
 
-Start über Kommandozeile
+Das Tool wird über die Kommandozeile gestartet, indem ```python main.py``` als Befehl ausgeführt wird. Dazu muss zuerst aber geprüft werden, ob alle 
 ```python main.py```
 
 Daten müssen wie wie folgt vorliegen?
