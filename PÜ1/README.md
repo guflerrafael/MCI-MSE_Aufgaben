@@ -1,7 +1,7 @@
 # Leistungsdiagnostik
 **(kurze Beschreibung des Ziels)**
 
-Werkzeug zur Vereinfachung und Automatisierung von Leistungstests, basierend auf EKG-Daten und Leistungswerten und Patient:innen-Daten
+Tool zur automatisierten Auswertung der Daten eines Fahrradergometer-Leistungstest, welches als Ergebnis sowohl die Herzrate, als auch die erbrachte Leistung in Form eines Plots und deren zugrundeliegenden Daten, gespeichert in einer Datei, liefert.
 
 ## Installation
 
@@ -19,9 +19,9 @@ Start über Kommandozeile
 Daten müssen wie wie folgt vorliegen?
 
 ## Contributing
-**(Wer ist im Team Name + Matrikelnummer + Email)**
 
-- [Julian Huber - 123](julian.huber@mci.edu)
+- Gufler Rafael, , gr2601@mci4me.at
+- Gruber Richard, , richi24091996@hotmail.com
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
