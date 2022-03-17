@@ -1,4 +1,5 @@
 # Leistungsdiagnostik
+
 Tool zur automatisierten Auswertung der Daten eines Fahrradergometer-Leistungstests, welches als Ergebnis sowohl die Herzrate, als auch die erbrachte Leistung in Form eines Plots und deren zugrundeliegenden Daten, gespeichert in einer Datei, liefert.
 
 ## Installation
@@ -9,8 +10,7 @@ Für die Proof-Of-Concept-Version des Tools wird nur die Kommandozeile gebraucht
 
 (Wie benutzt man das Werkzeug. Wo müssen Daten in welcher Form liegen?)
 
-Das Tool wird über die Kommandozeile gestartet, indem ```python main.py``` als Befehl ausgeführt wird. Dazu muss zuerst aber geprüft werden, ob alle 
-```python main.py```
+Bevor das Tool gestartet wird, sollte zuerst geprüft werden, ob alle Daten als ".txt"-Datei im Ordner "input_data" vorliegen. Anschließend wird das Tool über die Kommandozeile gestartet, indem ```python main.py``` als Befehl ausgeführt wird. 
 
 Daten müssen wie wie folgt vorliegen?
 
