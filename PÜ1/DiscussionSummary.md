@@ -25,7 +25,7 @@ Den Input liefert der Propant der Mittels diversen Sensoren überwacht wird.
 
 ## Project Objectives
 ### Known business rules
-Der bediener des gerätes bringt die sensoren am propanten an und startet die Aufzeichnung.
+Der Diagnostiker des Gerätes bringt die Sensoren am Propanten an und startet die Aufzeichnung.
 Dafür müssen vorher noch die Daten (Name, Technische ID und Geburtsdatum) eingegeben werden.
 
 ### System information and/or diagrams
@@ -36,7 +36,7 @@ Beispiel von aufgezeichneten EKG Daten
 Aus diesem muss die Herzrate bestimmt werden.
 
 ### Assumptions and dependencies
-Das tool soll per Kommandozeile bedient werden und kein Nutzerinterface haben.
+Das Tool soll per Kommandozeile bedient werden und kein Nutzerinterface haben.
 
 
 
@@ -47,7 +47,7 @@ Außerdem gibt es Abbruchkriterien:
 - Andere Kriterien die vom Diagnostiker eingegeben werden können.
 
 ## Risks
-Das gößte Risoko ist ein Datenverlust der gesamten Propanten.
+Das gößte Risoko ist ein Datenverlust der gesamten Aufzeichnungen.
 
 ## Known future enhancements
 In näherer Zukunft könnten auch noch andere Test-Typen eingefügt werden.
