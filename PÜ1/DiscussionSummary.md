@@ -47,16 +47,16 @@ Außerdem gibt es Abbruchkriterien:
 - Andere Kriterien die vom Diagnostiker eingegeben werden können.
 
 ## Risks
-
+Das gößte Risoko ist ein Datenverlust der gesamten Propanten.
 
 ## Known future enhancements
+In näherer Zukunft könnten auch noch andere Test-Typen eingefügt werden.
 
-...
 
 ## References
 
 - [Link zur Aufgabenstellung](tbd)
 
 ## Open, unresolved or TBD issues
+Für mehr sicherheit wäre es sinvoll die gespeicherten Daten mit einer Cloud laufend zu Synchronisieren um einen Datenverlust zu vermeiden.
 
-...
