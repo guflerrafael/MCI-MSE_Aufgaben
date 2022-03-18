@@ -29,7 +29,7 @@ Die gesamten Messwerte die während des Tests entstanden sind werden an das Prog
 Dann weden die Informationen des Propanten eingegeben (Name, Technische ID und Geburtsdatum).
 Anschließend Wertet das Programm die Testergebnisse aus.
 Alle Daten werden bei beendigung des Tests in einem eigenem Ordner gespeichert.
-Dabei wird noch zwischen erfolgreichen und abbgebrochenen Ergebniss unterschieden.
+Dabei wird noch zwischen erfolgreichen und abbgebrochenen Ergebnis unterschieden.
 
 ### System information and/or diagrams
 
