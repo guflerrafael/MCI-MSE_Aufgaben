@@ -4,14 +4,14 @@
 Ziel dieses Projektes ist es eine Leistungsfeststellung mittels eines Fharradergometers.
 Dabei wird nur ein Test-Typ gefahren (3 Minuten).
 Es wird der Puls und die Leistung des Propanten erfasst.
+Diese Daten sollen Ausgewertet und visualisiert werden.
 
 ### Scope of project
 Das Programm soll die Daten speichern und als Diagramme ausgeben.
 
 ### Other background information
-Es gibt einige Abbruchkriterien die ebanfalls berücksichtig werden müssen:
-#Puls 90% der maximalen Herzfrequenz.
-#Diverse andere Kriterien die manuell eingestellt werden können.
+Es gibt einige Abbruchkriterien die ebanfalls berücksichtig werden müssen.
+Diese Tests (Daten) sollen in einem seperaten Ordner gespeichert werden. 
 
 
 ## Perspectives
@@ -25,7 +25,8 @@ Den Input liefert der Propant der Mittels diversen Sensoren überwacht wird.
 
 ## Project Objectives
 ### Known business rules
-
+Der bediener des gerätes bringt die sensoren am propanten an und startet die Aufzeichnung.
+Dafür müssen vorher noch die Daten (Name, Technische ID und Geburtsdatum) eingegeben werden.
 
 ### System information and/or diagrams
 
@@ -35,16 +36,18 @@ Beispiel von aufgezeichneten EKG Daten
 Aus diesem muss die Herzrate bestimmt werden.
 
 ### Assumptions and dependencies
+Das tool soll per Kommandozeile bedient werden und kein Nutzerinterface haben.
 
-...
+
 
 ### Design and implementation constraints
-
-...
+Es is eine feste Zeit von 3 min pro Test vorgegeben.
+Außerdem gibt es Abbruchkriterien:
+- Herzfrequenz über 90% (220-Lebensalter).
+- Andere Kriterien die vom Diagnostiker eingegeben werden können.
 
 ## Risks
 
-...
 
 ## Known future enhancements
 
