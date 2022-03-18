@@ -25,8 +25,11 @@ Den Input liefert der Propant der Mittels diversen Sensoren überwacht wird.
 
 ## Project Objectives
 ### Known business rules
-Der Diagnostiker des Gerätes bringt die Sensoren am Propanten an und startet die Aufzeichnung.
-Dafür müssen vorher noch die Daten (Name, Technische ID und Geburtsdatum) eingegeben werden.
+Die gesamten Messwerte die während des Tests entstanden sind werden an das Programm übermittelt.
+Dann weden die Informationen des Propanten eingegeben (Name, Technische ID und Geburtsdatum).
+Anschließend Wertet das Programm die Testergebnisse aus.
+Alle Daten werden bei beendigung des Tests in einem eigenem Ordner gespeichert.
+Dabei wird noch zwischen erfolgreichen und abbgebrochenen Ergebniss unterschieden.
 
 ### System information and/or diagrams
 
