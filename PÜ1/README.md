@@ -4,7 +4,7 @@ Tool zur automatisierten Auswertung der Daten eines Fahrradergometer-Leistungste
 
 ## Installation
 
-Für die Proof-Of-Concept-Version des Tools wird nur die Kommandozeile gebraucht, weshalb keine zusätzliche Installation nötig ist.
+Für die Proof-Of-Concept-Version des Tools wird nur die Kommandozeile gebraucht, weshalb keine zusätzlichen Installationen nötig sind.
 
 ## Usage
 
