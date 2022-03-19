@@ -61,5 +61,5 @@ In näherer Zukunft könnten auch noch die Auswertung anderer Test-Typen und ein
 - [Link zur Aufgabenstellung](tbd)
 
 ## Open, unresolved or TBD issues
-Für mehr Sicherheit wäre es sinnvoll die gespeicherten Daten mit einer Cloud laufend zu synchronisieren um einen Datenverlust zu vermeiden.
+Für mehr Sicherheit wäre es sinnvoll, die gespeicherten Daten mit einer Cloud laufend zu synchronisieren um einen Datenverlust zu vermeiden.
 
