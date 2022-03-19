@@ -26,5 +26,3 @@
 | Hinweise                       | Kurze Erklärungen zum besseren Verständnis, Hinweise zu Nebeneffekten, Mengengerüsten soweit erforderlich und alles andere, das nicht weiter oben dargestellt werden kann.              | keine                                                                                                                                            |
 | Änderungsgeschichte            | Versionierung, Name des Autors, Datum                                                                                                                                                   | 0.01; 18.03.2022.; Rafael Gufler, Richard Gruber                                                                                                                   |
 |                                |                                                                                                                                                                                         |                                                                                                                                                  |
-
-### Weitere sind zu befüllen
