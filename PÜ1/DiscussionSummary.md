@@ -32,9 +32,10 @@ Hierbei wird noch mittels Unterordner zwischen erfolgreichen und abgebrochen Dur
 
 ### System information and/or diagrams
 
-Beispiel von aufgezeichneten EKG-Daten
+
 ![](ekg_example.png)
 
+Beispiel von aufgezeichneten EKG-Daten.
 Diese Daten werden vom Programm weiter ausgewertet und von dem Diagnostiker begutachtet.
 
 ### Assumptions and dependencies
