@@ -20,8 +20,10 @@ Bedient wird dieses System nur von dem Diagnostiker.
 Dieser kann mit den geplotteten Werten eine Diagnose erstellen.
 
 ### Who can provide input about the system?
+
 Den Input liefert der Proband, der Mittels diversen Sensoren überwacht wird.
 
+NOTE_JHU: Hier ist eher gemeint, bei wem man Rückfragen bezüglich des Systems stellen kann ;)
 
 ## Project Objectives
 ### Known business rules
