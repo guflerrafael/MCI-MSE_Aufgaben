@@ -2,9 +2,13 @@
 
 Tool zur automatisierten Auswertung der Daten eines Fahrradergometer-Leistungstests, welches als Ergebnis sowohl die Herzrate, als auch die erbrachte Leistung in Form eines Plots und deren zugrundeliegenden Daten, gespeichert in einer Datei, liefert.
 
+NOTE_JHU: Jeweils einer Datei? oder Plot und Daten wirklich in einer Datei?
+
 ## Installation
 
 Für die Proof-Of-Concept-Version des Tools wird nur die Kommandozeile gebraucht, weshalb keine zusätzlichen Installationen nötig sind.
+
+NOTE_JHU: Zumindest Python und Matploblib vermute ich. Außer ihr bekommt das rein mit Bash-Skripten hin ;) Möglich ist das [schon](https://markofthelam.com/blog/tictactoe/)
 
 ## Usage
 
