@@ -13,7 +13,7 @@
 # Alle Daten werden richtig Sortiert. 
 
 #%% UC 2.5 Visualiseren 
-#Die Daten werden mittels Diagrammen und anderen veranschulichungen Visualisert.
+#Die Daten werden mittels Diagrammen und anderen Veranschulichungen visualisert.
 
 #%% UC2.6 Speichern der Daten
-#Ein Ordner für den Patient wird erstellt und die gesamten Daten sowie die Diagramme werden Darin gespeichert.
+#Ein Ordner wird erstellt und die gesamten Daten sowie die Diagramme werden darin gespeichert.
