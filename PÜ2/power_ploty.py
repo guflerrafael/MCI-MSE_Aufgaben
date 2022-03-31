@@ -21,8 +21,8 @@ for filename in os.listdir(directory):
         number = number[2].split(".")
 
         # plot data with multiple windows
-        plt.figure("Power Data " + number[0])
-        plt.title("Power Data " + number[0])
+        plt.figure("Power Data in Watt " + number[0])
+        plt.title("Power Data in Watt " + number[0])
         plt.plot(data, color="red")
 
 plt.show()
