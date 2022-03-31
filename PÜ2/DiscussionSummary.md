@@ -41,12 +41,11 @@ Diese Daten werden vom Programm weiter ausgewertet und von dem Diagnostiker begu
 ### Assumptions and dependencies
 In den csv-Dateien sind die EKG-Daten der verschiedenen Patienten gespeichert. Für jeden Datenpunkt wird die gemessene Spannung in mV angegeben. Alle EKG-Daten haben eine zeitliche Auflösung von 1kHz, es werden also pro Sekunde 1.000 Datenpunkte geschrieben. 
 
-In den txt-Dateien sind die Leistungsdaten der einzelnen Patienten beschrieben, hierbei wird für jede Zeile (was den Sekunden entspricht) die entsprechende Leistung in Watt gespeichert. Die zeitliche Auflösung entpricht 1Hz.
+- In den txt-Dateien sind die Leistungsdaten der einzelnen Patienten beschrieben, hierbei wird für jede Zeile (was den Sekunden entspricht) die entsprechende Leistung in Watt gespeichert. Die zeitliche Auflösung entpricht 1Hz.
+- Sowohl bei den EKG-, als auch den Leistungsdaten haben die Tests einen zeitlichen Umfang von 180 Sekunden.
+- In den json-Dateien sind zusätzliche Daten zum Patienten, wie zum Beispiel sein Geburtsjahr, und dessen Leistungstest (Dauer und vorgegebene Leistung) hinterlegt.
 
-Sowohl bei den EKG-, als auch den Leistungsdaten haben die Tests einen zeitlichen Umfang von 180 Sekunden.
-
-In den json-Dateien sind zusätzliche Daten zum Patienten, wie zum Beispiel sein Geburtsjahr, und dessen Leistungstest (Dauer und vorgegebene Leistung) hinterlegt.
-
+NOTE-JHU: Gut, ahbs noch mit Bulletpoints strukturiert, damit es ein so Textbrei ist.
 
 ### Design and implementation constraints
 Es ist eine feste Zeit von 3 min pro Test vorgegeben.
