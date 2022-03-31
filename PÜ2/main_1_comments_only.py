@@ -21,3 +21,4 @@
 
 # %% UC 2.7 Speichern der Daten
 # Ein Ordner wird erstellt und die gesamten Daten, sowie die Diagramme, werden darin gespeichert.
+# NOTE-JHU: Hier vorsicht beim Implementieren. Die Ordner werden nur beim ersten mal Daten einlesen erstellt.
