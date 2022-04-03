@@ -10,9 +10,11 @@ global termination
 termination = False
 
 #%% UC 2.1 Einlesen der Daten
+## Überprüfen ob Dateien vorhanden sind und erstellen einer Liste von Tests, die zu verarbeiten sind
 
-# Funktion zum Einlesen und speichern von Daten als Liste von panda_dataframes
 def get_data():
+    """Funktion zum Einlesen und Speichern von Daten als Liste von panda_dataframes, Rückgabe: Liste der eingelesenen Tests"""
+
     list_of_new_tests = []
     folder_input_data = os.path.join(os.path.dirname(__file__) , 'input_data')
 
@@ -35,8 +37,9 @@ list_of_new_tests = get_data()
 #%% UC 2.2 Vorverarbeiten der Daten
 ## Anlegen einer Zeitreihe der Herzfrequenz aus den EKG-Daten für Subject_3
 
-# Funktion zum Finden der Peaks und Berechnung des moving_averages
 def analyze_data():
+    """Funktion zum Finden der Peaks und Berechnung des moving_averages der Herzrate des Patienten, Rückgabe: Peaks und moving_average"""
+
     ekg_data=pd.DataFrame()
     new_ecg_data = list_of_new_tests[0]
     ekg_data["ECG"] = new_ecg_data["Subject_3"]
@@ -58,8 +61,9 @@ heartrate, average_hr_test = analyze_data()
 #%% UC 2.3 Analysieren der Daten auf Abbruch-Kriterium
 ## Vergleich der Maximalen Herzfrequenz mit Alter des Patienten (Subject_3)
 
-# JSON Datei wird geöffnet und auf 
 def load_json(filename):
+    """JSON Datei wird geöffnet und als dictionary zurückgegeben, Rückgabe: Daten der Testperson"""
+
     folder_input_data = os.path.join(os.path.dirname(__file__) , 'input_data')
     file_name = folder_input_data = os.path.join(folder_input_data, filename)
     f = open(file_name)
@@ -67,8 +71,9 @@ def load_json(filename):
 
     return subject_data
 
-# Abrruchkriterium überprüft, falls positiv wird termination auf true gesetzt
 def check_data(subject_birthyear):
+    """Daten werden auf Abbruchkriterium überprüft, falls postitiv termination auf true gesetzt, Rückgabe: Maximale Herzrate und zugelassene max. Herzrate"""
+
     maximum_hr = heartrate['average_HR_10s'].max()
     subject_max_hr = 220 - (2022 - subject_birthyear)
 
@@ -81,9 +86,11 @@ subject_data = load_json("subject_3.json")
 maximum_hr, subject_max_hr = check_data(subject_data["birth_year"])
 
 #%% UC 2.4 Erstellen einer Zusammenfassung
-
 ## Ausgabe einer Zusammenfassung der verarbeiteten Daten
+
 def print_summary():
+    """Daten werden zusammengefasst ausgegeben und angezeigt"""
+
     print("Summary for Subject: " + str(subject_data["subject_id"]))
     print("Year of birth:  " + str(subject_data["birth_year"]))
     print("Test level power in W:  " + str(subject_data["test_power_w"]))
@@ -94,9 +101,11 @@ def print_summary():
 print_summary()
 
 #%% UC 2.5 Visualisierung der Daten
+## Erstellung eines Plots
 
-# Einlesen der Watt Daten
 def load_power_data(filename):
+    """Einlesen der Watt-Daten aus den power_data.txt-Dateien, Rückgabe: Watt-Daten des Patienten"""
+
     folder_input_data = os.path.join(os.path.dirname(__file__), 'input_data')
     file_name =  os.path.join(folder_input_data, filename)
     power_data_watts = open(file_name).read().split("\n")
@@ -105,8 +114,9 @@ def load_power_data(filename):
 
     return power_data_watts
 
-## Erstellung und Anzeigen des Plots mit Watt Daten und moving_average der Herzrate
 def plot_power_data():
+    """Erstellen und Anzeigen des Plots mit Watt Daten und moving_average der Herzrate, Rückgabe: Peaks der Herzrate mit verringerter Amplitude (normalisiert)"""
+
     peaks_downsampled = heartrate[heartrate.index % 1000 == 0]  
     peaks_downsampled = peaks_downsampled.reset_index(drop=True)
     peaks_downsampled = peaks_downsampled.drop(["ECG_R_Peaks"],axis=1)
@@ -122,6 +132,8 @@ peaks_downsampled = plot_power_data()
 ## Abfrage an Nutzer:in, ob Abgebrochen werden soll
 
 def manual_term():
+    """Manuelle Eingabemöglichkeit von Abbruchkriterien für Nutzer:in, Rückgabe: Grund des Abbruchs"""
+
     manual_termination = False
     manual_termination = input("Is this test invalid? (leave blank if valid): ")
 
@@ -145,8 +157,10 @@ data = {
     "Average Power" : peaks_downsampled["Power (Watt)"].mean()
 }
 
-# Schreiben der Daten als JSON-Datei
+
 def write_data():
+    """Schreiben der Daten des Test als JSON-Datei in result-Ordner"""
+
     folder_input_data = os.path.join(os.path.dirname(__file__) , 'result_data')
     results_file = os.path.join(folder_input_data, 'data.json')
 
