@@ -12,11 +12,23 @@ termination = False
 #%% UC 2.1 Einlesen der Daten
 ## Überprüfen ob Dateien vorhanden sind und erstellen einer Liste von Tests, die zu verarbeiten sind
 
-def get_data():
-    """Funktion zum Einlesen und Speichern von Daten als Liste von panda_dataframes, Rückgabe: Liste der eingelesenen Tests"""
 
+folder_input_data = os.path.join(os.path.dirname(__file__) , 'input_data')
+    
+def get_data(folder_input_data):
+    """Funktion zum Einlesen und Speichern von Daten als Liste von panda_dataframes, Rückgabe: Liste der eingelesenen Tests
+    
+
+            Parameters:
+                    folder_input_data (string): A path with input data as csv files
+            
+            Returns:
+                    list_of_new_tests (array): a list of the test data
+                
+                    
+    """
     list_of_new_tests = []
-    folder_input_data = os.path.join(os.path.dirname(__file__) , 'input_data')
+
 
     ## Überprüfen ob Dateien vorhanden sind
     for file in os.listdir(folder_input_data):
