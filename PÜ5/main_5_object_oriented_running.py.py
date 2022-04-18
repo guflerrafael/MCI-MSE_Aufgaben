@@ -109,6 +109,11 @@ class Test:
 
         #self.peaks['average_HR_10s'].plot()
 
+        # Berechnung Varianz und  average Hr
+
+        self.varianz_hr = self.hr_peaks['average_HR_10s'].var()
+        self.average_hr = self.hr_peaks['average_HR_10s'].mean()
+
     def evaluate_termination(self):
         """
         Evaluate the automatic termination of the test
@@ -140,6 +145,8 @@ class Test:
         print("Maximum HR was: " + str(self.maximum_hr))
         print("Was test terminated because exceeding HR: " + str(self.terminated))
         print("Was test terminated because for other reasons: " + str(self.manual_termination))
+        print("Varianz HR was: " + str(self.varianz_hr))
+        print("Average HR was: " + str(self.average_hr))
 
         print("________________")
         print(" \n")
