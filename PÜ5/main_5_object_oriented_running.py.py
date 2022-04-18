@@ -4,6 +4,7 @@
 import pandas as pd
 import neurokit2 as nk
 import json
+import logging
 
 # %%
 # Definition of Classes
@@ -196,7 +197,6 @@ class Test:
 
 ## Einlesen der Daten
 
-
 ### Erstellen leerer Liste zur Verarbeitung
 list_of_new_tests = []
 list_of_subjects = []
@@ -210,17 +210,26 @@ import pandas as pd
 
 folder_current = os.path.dirname(__file__) 
 folder_input_data = os.path.join(folder_current, 'input_data')
+
+# Log zum Lesen der Daten
+logging.basicConfig(filename="PÜ5/system_interaction.log", level=logging.INFO, format="%(levelname)s: %(asctime)s: %(message)s", datefmt="%d-%m-%y %H:%M:%S")
+
 for file in os.listdir(folder_input_data):
     file_name = os.path.join(folder_input_data, file)
 
+    # Loggen welche Datei für welches Subject geladen wurde
+
     if file.endswith(".csv"):
         list_of_new_tests.append(Test(file_name))
+        logging.info("ECG data of Subject " + file.split(".")[0][-1] + " has been loaded.")
 
     if file.endswith(".json"):
         list_of_subjects.append(Subject(file_name))
+        logging.info("Informative data of Subject " + file.split(".")[0][-1] + " has been loaded.")
 
     if file.endswith(".txt"):
         list_of_power_data.append(PowerData(file_name))
+        logging.info("Power data of Subject " + file.split(".")[0][-1] + " has been loaded.")
 
 
 # %% Programmablauf
@@ -237,5 +246,8 @@ for test in list_of_new_tests:                      # Alle Tests werden nacheina
     test.ask_for_termination()
     test.save_data()
 
-    iterator = iterator + 1
+    # Loggen wenn Test manuell abgebrochen
+    if test.manual_termination != "":
+        logging.info("Test of Subject " + test.subject_id + " has been marked as invalid because of: " + test.manual_termination)
 
+    iterator = iterator + 1
