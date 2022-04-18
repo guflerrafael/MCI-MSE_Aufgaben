@@ -190,6 +190,39 @@ class Test:
             json.dump(__data, f, ensure_ascii=False, indent=4)
 
 
+    # Daten mit Baumstruktur speichern
+    def save_data_as_tree(self):
+        """
+        Store the test data in a JSON file with tree strukture
+        """
+
+        # Aktueller Ordner um Pfad zu Plots zu finden
+        __folder_current = os.path.dirname(__file__)
+        __folder_input_data = os.path.join(__folder_current, 'result_data')
+        __file_name = 'plot_subject_' + str(self.subject_id) +'.png'
+        __results_file = os.path.join(__folder_input_data, __file_name)
+
+        __data = {
+            "Test": {
+                "Reason for test termation": self.manual_termination, 
+                "Average Heart Rate": self.average_hr_test, 
+                "Maximum Heart Rate": self.maximum_hr, 
+                "Test Length (s)": self.power_data.duration_s, 
+                "Test Power (W)": self.subject.test_power_w,
+                "Path to plot": __results_file
+            },
+
+            "Subject": {
+                "User ID": self.subject_id,
+            }
+        }
+        
+        __file_name = 'result_data_subject' + str(self.subject_id) +'.json'
+        __results_file = os.path.join(__folder_input_data, __file_name)
+
+        with open(__results_file, 'w', encoding='utf-8') as f:
+            json.dump(__data, f, ensure_ascii=False, indent=4)
+
 
 
 
@@ -212,7 +245,7 @@ folder_current = os.path.dirname(__file__)
 folder_input_data = os.path.join(folder_current, 'input_data')
 
 # Log zum Lesen der Daten
-logging.basicConfig(filename="PÜ5/system_interaction.log", level=logging.INFO, format="%(levelname)s: %(asctime)s: %(message)s", datefmt="%d-%m-%y %H:%M:%S")
+logging.basicConfig(filename=os.path.join(folder_current, 'system_interaction.log'), level=logging.INFO, format="%(levelname)s: %(asctime)s: %(message)s", datefmt="%d-%m-%y %H:%M:%S")
 
 for file in os.listdir(folder_input_data):
     file_name = os.path.join(folder_input_data, file)
@@ -244,7 +277,7 @@ for test in list_of_new_tests:                      # Alle Tests werden nacheina
     test.create_summary()
     test.create_plot()
     test.ask_for_termination()
-    test.save_data()
+    test.save_data_as_tree()                        # Mit Baumstruktur
 
     # Loggen wenn Test manuell abgebrochen
     if test.manual_termination != "":
