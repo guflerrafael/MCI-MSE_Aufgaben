@@ -5,6 +5,7 @@ import pandas as pd
 import neurokit2 as nk
 import json
 import logging
+import matplotlib.pyplot as plt
 
 # %%
 # Definition of Classes
@@ -172,6 +173,35 @@ class Test:
 
         self.plot_data["Power (Watt)"] = pd.to_numeric(self.power_data.power_data_watts)
         self.plot_data.plot()
+
+
+    def create_new_plot(self):
+
+        #Richtiger Speicherort
+
+        _folder_current = os.path.dirname(__file__)
+        _folder_input_data = os.path.join(_folder_current, 'result_data')
+        _file_name = 'plot_subject_' + str(self.subject_id) +'.png'
+        _results_file = os.path.join(_folder_input_data, _file_name)
+        
+        #Ploten der Daten  
+        
+        herzrate = self.hr_peaks[self.ecg_data.index % 1000 == 0]["average_HR_10s"]  
+        herzrate = herzrate.reset_index(drop=True)
+        leistung = pd.to_numeric(self.power_data.power_data_watts)
+
+        
+        ax1 = plt.subplot(211)
+        ax1.plot(herzrate, color='magenta')
+        plt.grid(True)
+        plt.title("Test Subject " + self.subject_id)
+        plt.ylabel("BPM")
+        ax2 = plt.subplot(212)
+        ax2.plot(leistung, color='blue')
+        plt.xlabel("Zeit (s)")
+        plt.ylabel("Leistung (W)")
+        plt.grid(True)      
+        plt.savefig(_results_file)
     
 
     def save_data(self):
@@ -275,7 +305,7 @@ for test in list_of_new_tests:                      # Alle Tests werden nacheina
     test.add_power_data(list_of_power_data[iterator]) 
     test.evaluate_termination()
     test.create_summary()
-    test.create_plot()
+    test.create_new_plot()
     test.ask_for_termination()
     test.save_data_as_tree()                        # Mit Baumstruktur
 
