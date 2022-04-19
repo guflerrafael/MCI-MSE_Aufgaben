@@ -284,7 +284,7 @@ for file in os.listdir(folder_input_data):
 
     if file.endswith(".csv"):
         list_of_new_tests.append(Test(file_name))
-        logging.info("ECG data of Subject " + file.split(".")[0][-1] + " has been loaded.")
+        logging.info("ECG data of Subject " + file.split(".")[0][-1] + " has been loaded.") 
 
     if file.endswith(".json"):
         list_of_subjects.append(Subject(file_name))
